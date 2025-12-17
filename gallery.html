@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="gallery.css">
+	<title>GALLERY</title>
+</head>
+<body>
+<h1>Am's Personal Website</h1>
+<nav>
+	<a href="index.html">Home</a>
+	<a href="about_me.html">About Me</a>
+	<a href="family.html">Family</a>
+	<a href="education.html">Education</a>
+	<a href="experience.html">Experience</a>
+	<a href="friends.html">Friends</a>
+	<a href="favourites.html">Favourites</a>
+	<a href="gallery.html">Gallery</a>
+</nav>
+
+<!----Website Content here---->
+
+<div class="content">
+	<h2>Gallery</h2>
+	<p>This is my random photo</p>
+
+
+<fieldset class="galeri">
+  <legend>Photos</legend>
+
+  <div class="slider-container">
+    <button class="prev">&#10094;</button>
+    <div class="slider">
+
+      <img src="image 48.jpg" alt="image 48" class="active">
+      <img src="image 49.jpg" alt="image 49"class="active">
+      <img src="image 50.jpg" alt="image 50"class="active">
+      <img src="image 51.jpg" alt="image 51"class="active">
+      <img src="image 52.jpg" alt="image 52"class="active">
+      <img src="image 53.jpg" alt="image 53"class="active">
+      <img src="image 54.jpg" alt="image 54"class="active">
+      <img src="image 55.jpg" alt="image 55"class="active">
+      <img src="image 56.jpg" alt="image 54"class="active">
+      <img src="image 57.jpg" alt="image 57"class="active">
+    
+
+    </div>
+    <button class="next">&#10095;</button>
+  </div>
+
+
+<script>
+const slides = document.querySelectorAll('.slider img');
+let currentIndex = 0;
+
+const showSlide = (index) => {
+  slides.forEach((img, i) => {
+    img.classList.remove('active');
+    if (i === index) {
+      img.classList.add('active');
+    }
+  });
+};
+
+// Tunjuk gambar pertama
+showSlide(currentIndex);
+
+// Butang Next
+document.querySelector('.next').addEventListener('click', () => {
+  currentIndex++;
+  if (currentIndex >= slides.length) currentIndex = 0;
+  showSlide(currentIndex);
+});
+
+// Butang Prev
+document.querySelector('.prev').addEventListener('click', () => {
+  currentIndex--;
+  if (currentIndex < 0) currentIndex = slides.length - 1;
+  showSlide(currentIndex);
+});
+</script> 
+  <p class="caption">Random Take From Iphone 11</p>
+</fieldset>
+
+
+
+
+</body>
+</html>
+  
+	<footer class="footer">
+		<p>&copy; 2025 Designed for Educational Purposes | Amerul Hakiem </p>
+	</footer>
+</body>
+</html>

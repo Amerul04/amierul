@@ -1,0 +1,144 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', ADLaM Display;
+  background-color: #0D0D0D; 
+  background-image: url('image 13.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  color: #F5F5F5;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: darkcyan;
+  margin: 20px 0;
+}
+
+/* Navigation Bar */
+nav {
+  background: softgrey;
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 10px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+nav > a {
+  color:black;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: background 0.25s, color 0.25s;
+}
+
+nav > a:hover {
+  background: rgb(56, 130, 209);
+  color: black;
+}
+
+/* Website Content */
+.content {
+  background: rgba(20, 20, 20, 0.9);
+  color: yellow;
+  width: 80%;
+  max-width: 900px;
+  margin: 40px auto 100px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  .galeri {
+  border: 10px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.galeri legend {
+  font-weight: bold;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slider img {
+  min-width: 100%; /* satu gambar penuh */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: none; /* mula-mula sembunyi semua */
+}
+
+.slider img.active {
+  display: block; /* hanya gambar aktif yang dipaparkan */
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.prev { left: 5px; }
+.next { right: 5px; }
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.caption {
+  text-align: center;
+  font-style: italic;
+  color:brown;
+  margin-top: 20px;
+
+}
+
+/* Footer Styling */
+.footer {
+  background: #white;
+  color: #white;
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 3px solid rgb(56, 130, 209);
+  font-size: 0.9em;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+}
+
+.footer p {
+  margin: 5;
+  color: white;
+}
